@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>House Main - Detalles</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    .main-img {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .thumbnail-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .thumbnail-container img {
+      width: 100px;
+      height: 70px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      border-radius: 5px;
+    }
+
+    .thumbnail-container img:hover {
+      border-color: #007bff;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    .features img {
+      width: 30px;
+      vertical-align: middle;
+    }
+
+    .features p {
+      display: inline-block;
+      margin: 0;
+      vertical-align: middle;
+    }
+
+    .price {
+      text-align: center;
+      font-size: 1.8em;
+      color: green;
+      margin: 15px 0;
+    }
+
+    .back {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .back a {
+      background: #007bff;
+      padding: 10px 20px;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    .back a:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>House Main</h1>
+    <p class="price">$8'900,000 MXN</p>
+
+    <img id="mainImage" class="main-img" src="../img/anuncio1.jpg" alt="Imagen principal">
+
+    <div class="thumbnail-container">
+      <img src="../img/anuncio1.jpg" onclick="changeImage(this.src)" alt="Vista 1">
+      <img src="../img/Recamara_5.jpeg" onclick="changeImage(this.src)" alt="Vista 2">
+      <img src="../img/baño_5.jpeg" onclick="changeImage(this.src)" alt="Vista 3">
+      <img src="../img/metros_5.jpeg" onclick="changeImage(this.src)" alt="Vista 4">
+    </div>
+
+    <h2>Características</h2>
+    <div class="features">
+      <div>
+        <img src="../img/Recamaras.png" alt="Recámaras">
+        <p>3 recámaras</p>
+      </div>
+      <div>
+        <img src="../img/baños.png" alt="Baños">
+        <p>2 baños</p>
+      </div>
+      <div>
+        <img src="../img/m2.png" alt="Metros cuadrados">
+        <p>82 m²</p>
+      </div>
+    </div>
+
+    <div class="back">
+      <a href="../index.html">← Volver al inicio</a>
+    </div>
+  </div>
+
+  <script>
+    function changeImage(src) {
+      document.getElementById('mainImage').src = src;
+    }
+  </script>
+
+</body>
+</html>

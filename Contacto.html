@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contáctanos - HousRun</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, textarea {
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #map {
+      height: 350px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body style="background: blue;">
+        
+          <div class="container">
+            <h1>Contáctanos</h1>
+            <p><strong>Dirección:</strong> Adolfo López Mateos Sur 9020, Zapopan, Jalisco</p>
+            <p><strong>Teléfono:</strong> <a href="tel:3324123000">332 412 3000</a></p>
+            <p><strong>Correo:</strong> <a href="mailto:contacto@housrun.com">jesus@housrun.com</a></p>
+        
+            <form>
+              <input type="text" placeholder="Tu nombre" required>
+              <input type="email" placeholder="Tu correo" required>
+              <textarea placeholder="Tu mensaje" rows="5" required></textarea>
+              <button type="submit">Enviar</button>
+            </form>
+        
+            <div id="map"></div>
+          </div>
+        
+          <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+          <script>
+        
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              attribution: '© OpenStreetMap',
+            }).addTo(map);
+        
+            L.marker([19.4326, -99.1332])
+              .addTo(map)
+              .bindPopup('Oficina HousRun')
+              .openPopup();
+          </script>
+        
+        </body>
+        </html>
+        </p>
+
+    <div id="map"></div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map').setView([20.59371471031153, -103.44126197086821], 14); 
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap',
+    }).addTo(map);
+
+    L.marker([20.59371471031153, -103.44126197086821])
+      .addTo(map)
+      .bindPopup('Oficina HousRun')
+      .openPopup();
+  </script>
+
+</body>
+</html>
